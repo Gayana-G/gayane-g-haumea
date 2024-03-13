@@ -7,49 +7,85 @@
     <meta name="author" content="Gayane G">
     <meta http-equiv="refresh" content="60">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ojuju:wght@200..800&display=swap">
+    <link href="./css/index.css" rel="stylesheet">
+
 </head>
 
-<body>
-    <h1>Gayane G</h1>
+<body weight="200">
+    <div class="container">
+        <img class="profile-photo" src="./images/photo.jpg" height="300px" alt="profile-picture">
+        <h1>Gayane G</h1>
+    </div>
     <section id="About">
         <h2>About</h2>
-        <p>I am a QA engineer with several years of industry experience under my belt. Over the years, I have had the
-            opportunity to gain valuable expertise in ensuring software quality and identifying potential issues. I
-            strive
-            to be a dedicated professional in my field, constantly learning and improving. With meticulous attention to
-            detail and an analytical mindset, I have contributed to the successful delivery of high-quality software
-            products. While I have achieved a level of proficiency in QA engineering, I am also eager to explore new
-            horizons. I have developed an interest in full-stack development and aspire to expand my skill set in this
-            area.
-            I understand that there is much to learn on this journey, and I am excited to take on the challenge with a
-            humble and open mindset.</p>
+        <div class="about-block">
+            <p>I am a QA engineer with several years of industry experience under my belt. Over the years, I have
+                had the
+                opportunity to gain valuable expertise in ensuring software quality and identifying potential
+                issues. I
+                strive
+                to be a dedicated professional in my field, constantly learning and improving. With meticulous
+                attention to
+                detail and an analytical mindset, I have contributed to the successful delivery of high-quality
+                software
+                products. While I have achieved a level of proficiency in QA engineering, I am also eager to explore
+                new
+                horizons. I have developed an interest in full-stack development and aspire to expand my skill set
+                in this
+                area.
+                I understand that there is much to learn on this journey, and I am excited to take on the challenge
+                with a
+                humble and open mindset.
+            </p>
+        </div>
     </section>
     <section id="Experience">
         <h2>Experience</h2>
-        <ul>
-            <li>UST Global</li>
-            <li>Virtual Training World</li>
+        <ul class="experience-list">
+            <li>
+                <div class="experience-block">
+                    <h3>UST Global</h3>
+                </div>
+            </li>
+            <li>
+                <div class="experience-block">
+                    <h3>Virtual Training World</h3>
+                </div>
+            </li>
         </ul>
     </section>
     <section id="Connect">
         <h2>Connect</h2>
         <ul>
-            <li>
-                <img src="./images/linkedin-logo.png" height="15px">
-                <a href="linkedin.com/in/galla-galus" class="linkedin-link">LinkedIn</a>
-            </li>
-            <li>
-                <img src="./images/git-logo.png" height="15px">
-                <a href="https://github.com/Gayana-G" class="git-link">Github</a>
-    
-            </li>
-            <li>
-                <img src="./images/gmail-logo.png" height="15px">
-                <a href="galla.galuss@gmail.com" class="'email">Email</a>
-    
-            </li>
+            <div class="connect-list">
+                <div class="connect-block">
+                    <li>
+                        <a href="https://www.linkedin.com/in/galla-galus" class="linkedin-link" target="_blank">
+                            <img src="./images/linkedin-logo.png" height="30px">
+                        </a>
+                    </li>
+                </div>
+                <div class="connect-block">
+                    <li>
+                        <a href="https://github.com/Gayana-G" class="git-link" target="_blank">
+                            <img src="./images/git-logo.png" height="30px">
+                        </a>
+                    </li>
+                </div>
+                <div class="connect-block">
+                    <li>
+                        <a href="galla.galuss@gmail.com" class="'email">
+                            <img src="./images/gmail-logo.png" height="25px">
+                        </a>
+                    </li>
+                </div>
+            </div>
         </ul>
     </section>
+
 </body>
 
 </html>

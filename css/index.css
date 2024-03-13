@@ -1,0 +1,95 @@
+body {
+  background: rgb(112, 175, 253);
+  color: rgb(35, 9, 126);
+  font-family: "Ojuju", sans-serif;
+  font-optical-sizing: auto;
+  font-style: italic;
+}
+#About {
+  margin: 10px 20px;
+  padding: 10px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 20px;
+}
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.about-block {
+  background-color: rgb(130, 217, 249);
+  border-radius: 10px;
+  border-style:dashed;
+  border-color: rgb(85, 3, 103);
+  border: 10px 20px;
+  padding: 10px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 20px;
+}
+img {
+  margin: 10px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 75px;
+  text-align: center;
+  font-weight: bolder;
+  color: rgb(35, 9, 126);
+}
+
+h2 {
+  font-size: 40px;
+  text-align: start;
+  font-weight: 600;
+  color: rgb(35, 9, 126);
+}
+
+#Experience {
+  margin: 10px 20px;
+  padding: 10px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 20px;
+}
+.experience-list {
+  list-style: none;
+  padding: 0;
+}
+
+.experience-block {
+  background-color: rgb(130, 217, 249);
+  border-radius: 10px;
+  border-style:ridge;
+  border-color: rgb(85, 3, 103);
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.experience-block h3 {
+  margin: 0;
+}
+
+#Connect {
+  margin: 10px 20px;
+  padding: 10px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 20px;
+}
+.connect-list {
+  list-style: none;
+  padding: 0;
+}
+
+.connect-block {
+  background-color: rgb(130, 217, 249);
+  border-radius: 10px;
+  border-style:ridge;
+  border-color: rgb(85, 3, 103);
+  width: 50px;
+  height: 50px;
+  margin-top: 20px;
+}
