@@ -4,17 +4,58 @@ body {
   font-family: "Ojuju", sans-serif;
   font-optical-sizing: auto;
   font-style: italic;
+  padding-top: 40px;
+  margin: 0;
 }
-#About {
-  margin: 10px 20px;
-  padding: 10px;
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(189, 235, 246, 0.9);
+  z-index: 1;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 10px 0;
+}
+
+nav ul {
+  display: flex;
+}
+
+nav li {
+  margin: 0 30px;
+  text-align: center;
+  font-weight: bold;
+  font-size:large
+}
+
+nav a {
+  text-decoration: none;
+  color: rgb(35, 9, 126);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 200px;
+}
+
+
+section {
+  margin: 20px 20px;
+  padding: 80px 0 0 20px;
   text-align: left;
   font-weight: 600;
   font-size: 20px;
-}
-.container {
-  display: flex;
-  align-items: center;
 }
 
 .about-block {
@@ -47,41 +88,44 @@ h2 {
   color: rgb(35, 9, 126);
 }
 
-#Experience {
-  margin: 10px 20px;
-  padding: 10px;
-  text-align: left;
-  font-weight: 600;
-  font-size: 20px;
-}
-.experience-list {
-  list-style: none;
-  padding: 0;
+.experience-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .experience-block {
   background-color: rgb(130, 217, 249);
   border-radius: 10px;
-  border-style:ridge;
+  border-style: ridge;
   border-color: rgb(85, 3, 103);
   padding: 10px;
   margin-bottom: 10px;
+  flex-basis: 100%; 
 }
 
 .experience-block h3 {
   margin: 0;
 }
 
-#Connect {
-  margin: 10px 20px;
-  padding: 10px;
-  text-align: left;
-  font-weight: 600;
-  font-size: 20px;
+.experience-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
 }
+
+.date {
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.description {
+  margin-top: 10px;
+}
+
 .connect-list {
   list-style: none;
-  padding: 0;
+  display: flex;
 }
 
 .connect-block {
@@ -91,5 +135,6 @@ h2 {
   border-color: rgb(85, 3, 103);
   width: 50px;
   height: 50px;
-  margin-top: 20px;
+  margin-right: 15px;
 }
+
