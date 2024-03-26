@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title >About Me</title>
+    <title>About Me</title>
     <meta charset="UTF-8">
     <meta name="author" content="Gayane G">
     <meta http-equiv="refresh" content="60">
@@ -17,13 +17,21 @@
 <body weight="200">
     <header>
         <nav>
-            <ul>
-                <li><a href="#About">About</a></li>
-                <li><a href="#Experience">Experience</a></li>
-                <li><a href="#Skills">Skills</a></li>
-                <li><a href="#Projects">Projects</a></li>
-                <li><a href="#Connect">Connect</a></li>
-            </ul>
+            <!-- Button-like links for larger screens -->
+            <a href="#About">About</a>
+            <a href="#Experience">Experience</a>
+            <a href="#Skills">Skills</a>
+            <a href="#Projects">Projects</a>
+            <a href="#Connect">Connect</a>
+
+            <!-- Dropdown select for smaller screens -->
+            <select onchange="window.location.href=this.value;">
+                <option value="#About">About</option>
+                <option value="#Experience">Experience</option>
+                <option value="#Skills">Skills</option>
+                <option value="#Projects">Projects</option>
+                <option value="#Connect">Connect</option>
+            </select>
         </nav>
     </header>
     <main>
@@ -54,7 +62,7 @@
                 </p>
             </div>
         </section>
-        <section id="Experience">
+        <section class="experience">
             <h2>Experience</h2>
             <div class="experience-grid">
                 <div class="experience-block">
