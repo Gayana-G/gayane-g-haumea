@@ -18,30 +18,47 @@ header {
   z-index: 1;
 }
 
+main {
+  margin-bottom: 100px;
+  margin-bottom: 100px; /* Adjust as needed */
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  padding: 0 20px;
+  background-color:rgba(189, 235, 246, 0.9);
+  text-align: right;
+  font-family: "Ojuju", sans-serif; 
+  font-size: 16px; 
+} 
+
 header a,
 nav select {
   display: inline-block;
-  padding: 10px 20px; /* Adjust padding as needed */
-  margin: 0 10px; /* Adjust margin as needed */
-  background-color: rgba(189, 235, 246, 0.9); /* Button background color */
-  border: 2px solid rgb(85, 3, 103); /* Button border */
-  border-radius: 5px; /* Button border radius */
+  padding: 10px 20px; 
+  margin: 0 10px; 
+  background-color: rgba(189, 235, 246, 0.9); 
+  border: 2px solid rgb(85, 3, 103); 
+  border-radius: 5px; 
   font-weight: bold;
-  font-family: "Ojuju", sans-serif; /* Ensure consistent font family */
-  font-size: 16px; /* Adjust font size as needed */
+  font-family: "Ojuju", sans-serif; 
+  font-size: 16px; 
   transition: background-color 0.3s, border-color 0.3s;
 }
 
 /* Hover effect */
 header a:hover {
-  background-color: rgb(130, 217, 249); /* Button background color on hover */
-  border-color: rgb(130, 217, 249); /* Button border color on hover */
+  background-color: rgb(130, 217, 249); 
+  border-color: rgb(130, 217, 249); 
 }
 
 /* Style for dropdown select */
 nav select {
-  display: none; /* Initially hide the select element */
-  font-family: "Ojuju", sans-serif; /* Ensure consistent font family */
+  display: none; 
+  font-family: "Ojuju", sans-serif; 
 }
 
 nav {
@@ -78,7 +95,7 @@ nav a {
 
 section {
   margin: 20px 20px;
-  padding: 80px 0 0 100px;
+  padding: 80px 0 0 10px;
   text-align: left;
   font-weight: 600;
   font-size: 20px;
