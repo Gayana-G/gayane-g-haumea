@@ -30,6 +30,10 @@ footer {
   font-size: 20px; 
 } 
 
+.profile-photo {
+  border-radius: 100%; /* Set border radius to 50% to make it a circle */
+  overflow: hidden; /* Hide overflow outside the circle */
+}
 header a,
 nav select {
   display: inline-block;
@@ -107,7 +111,16 @@ section {
   font-weight: 600;
   font-size: 20px;
 }
-
+.img {
+  position: fixed; /* Fixed position to cover the entire viewport */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Move the image below other content */
+  object-fit: cover; /* Cover the entire space with the image */
+  opacity: 0.5; /* Adjust image opacity as needed */
+}
 img {
   margin: 10px;
 }
@@ -163,6 +176,47 @@ h2 {
   margin-top: 10px;
 }
 
+/* Add this CSS code to customize the styling of your projects list */
+
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+}
+
+.project-item {
+  background-color: rgb(130, 217, 249);
+  border-radius: 10px;
+  border-style: ridge;
+  border-color: rgb(85, 3, 103);
+  padding: 10px;
+  margin-bottom: 10px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.project-name {
+  margin: 0;
+}
+
+.project-description {
+  margin-top: 10px;
+}
+
+/* Media Query for Mobile Devices */
+@media only screen and (max-width: 767px) {
+  .project-list {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  .project-item {
+    font-size: 16px;
+  }
+}
+
 .connect-list {
   list-style: none;
   display: flex;
@@ -190,6 +244,30 @@ h2 {
   font-weight: 300;
   font-size: 15px;
 }
+
+/* Add this CSS code to style the submit button */
+
+.submit-button, .edit-button, .remove-button {
+  background-color: rgb(130, 217, 249);
+  color: rgb(35, 9, 126);
+  border: 2px solid rgb(85, 3, 103);
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-weight: bold;
+  font-family: "Ojuju", sans-serif;
+  font-size: 16px;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+/* Hover effect */
+.submit-button:hover, .edit-button:hover, .remove-button:hover {
+  background-color: rgba(189, 235, 246, 0.9);
+  border-color: rgb(130, 217, 249);
+}
+
+
+
+
 /* Media Query for Mobile Devices */
 @media only screen and (max-width: 767px) {
   header a {
@@ -199,7 +277,7 @@ h2 {
   /* Display dropdown select on small screens */
   nav select {
     display: inline-block;
-    color: rgb(255, 0, 0);
+    color: rgb(120, 28, 28);
   }
 
   section {
@@ -214,7 +292,7 @@ h2 {
 
   h2 {
     font-size: 30px; /* 1st change: Reduced font size */
-    color: rgb(255, 0, 0); /* 2nd change: Changed font color */
+    color: rgb(120, 28, 28); /* 2nd change: Changed font color */
   }
 }
 
@@ -234,4 +312,9 @@ h2 {
     font-size: 40px; /* 1st change: Increased font size */
     font-weight: normal; /* 2nd change: Changed font weight */
   }
+
+  .project-list {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
 }
+
