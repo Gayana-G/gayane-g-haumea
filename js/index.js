@@ -46,7 +46,7 @@ messageForm.addEventListener("submit", function (event) {
   const removeButton = document.createElement("button");
   removeButton.innerText = "Remove";
   removeButton.type = "button";
-  removeButton.classList.add("remove-button")
+  removeButton.classList.add("remove-button");
 
   removeButton.addEventListener("click", function () {
     // Find the button's parent element using DOM Traversal
@@ -62,7 +62,7 @@ messageForm.addEventListener("submit", function (event) {
   const editButton = document.createElement("button");
   editButton.innerText = "Edit";
   editButton.type = "button";
-  editButton.classList.add("edit-button")
+  editButton.classList.add("edit-button");
 
   editButton.addEventListener("click", function () {
     const currentMsg = newMessage.querySelector("span").innerText;
