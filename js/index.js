@@ -46,12 +46,15 @@ messageForm.addEventListener("submit", function (event) {
   const removeButton = document.createElement("button");
   removeButton.innerText = "Remove";
   removeButton.type = "button";
+  removeButton.classList.add("remove-button");
 
   removeButton.addEventListener("click", function () {
     // Find the button's parent element using DOM Traversal
     const entry = removeButton.parentNode;
     // Remove the entry element from the DOM
     entry.remove();
+    // Toggle the display of the messages section
+    toggleMessagesSection();
   });
 
   newMessage.appendChild(removeButton);
@@ -59,6 +62,7 @@ messageForm.addEventListener("submit", function (event) {
   const editButton = document.createElement("button");
   editButton.innerText = "Edit";
   editButton.type = "button";
+  editButton.classList.add("edit-button");
 
   editButton.addEventListener("click", function () {
     const currentMsg = newMessage.querySelector("span").innerText;
@@ -73,40 +77,71 @@ messageForm.addEventListener("submit", function (event) {
 
   messageList.appendChild(newMessage);
 
-  if (messageList.children.length === 0) {
-    messageSection.style.display = "none";
-  } else {
-    messageSection.style.display = "block";
-  }
+  // Toggle the display of the messages section
+  toggleMessagesSection();
 });
+
+// Function to remove a message
+function removeMessage(entry) {
+  // Remove the entry element from the DOM
+  entry.remove();
+
+  // Toggle the display of the messages section
+  toggleMessagesSection();
+}
+
+// Function to toggle the display of the messages section
+function toggleMessagesSection() {
+  const messageSection = document.getElementById("messages");
+  const messageList = messageSection.querySelector("ul");
+
+  // Check if there are any messages
+  if (messageList.children.length === 0) {
+    messageSection.style.display = "none"; // Hide the messages section
+  } else {
+    messageSection.style.display = "block"; // Display the messages section
+  }
+}
+
+// Initial toggle of the messages section
+toggleMessagesSection();
 
 const username = "Gayana-G";
 // Creating a fetch
 fetch(`https://api.github.com/users/${username}/repos`)
   .then((response) => {
     if (response.ok) {
-      return response.text();
+      return response.json(); // Parse response as JSON
     } else {
       throw new Error("Failed to fetch repositories");
     }
   })
-  .then((data) => {
-    const repositories = JSON.parse(data);
-    console.log(repositories);
+  .then((repositories) => {
+    const projectList = document.getElementById("Projects");
 
-    // DOM Selection to select the projects section by id
-    const projectSection = document.getElementById("Projects");
-    // Query the projectSection to select the <ul> element
-    const projectList = projectSection.querySelector("ul");
-
-    for (let i = 0; i < repositories.length; i++) {
+    repositories.forEach((repo) => {
       // Create a new list item element
-      const project = document.createElement("li");
-      // Set the inner text of the project variable to the current repository's name property
-      project.innerText = repositories[i].name;
-      // Append the project element to the projectList element
-      projectList.appendChild(project);
-    }
+      const projectItem = document.createElement("li");
+      projectItem.classList.add("project-item"); // Add project-item class
+
+      // Create a new anchor element for the project name
+      const projectName = document.createElement("a");
+      projectName.href = repo.html_url;
+      projectName.textContent = repo.name;
+      projectName.classList.add("project-name"); // Add project-name class
+
+      // Create a paragraph element for the project description
+      const projectDescription = document.createElement("p");
+      projectDescription.textContent = repo.description;
+      projectDescription.classList.add("project-description"); // Add project-description class
+
+      // Append project name and description to project item
+      projectItem.appendChild(projectName);
+      projectItem.appendChild(projectDescription);
+
+      // Append project item to project list
+      projectList.appendChild(projectItem);
+    });
   })
   .catch((error) => {
     if (error instanceof SyntaxError) {

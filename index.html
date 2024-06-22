@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>About Me</title>
+    <title>🌟 My Project</title>
     <meta charset="UTF-8">
     <meta name="author" content="Gayane G">
     <meta http-equiv="refresh" content="60">
@@ -15,7 +15,7 @@
 </head>
 
 <body weight="200">
-
+    <img src="./images/background-patern.jpeg" alt="IT technologies background image" class="img">
     <header>
         <nav>
             <!-- Button-like links for larger screens -->
@@ -24,6 +24,7 @@
             <a href="#Skills">Skills</a>
             <a href="#Projects">Projects</a>
             <a href="#Connect">Connect</a>
+            <a href="#Leave_msg">Leave Message</a>
 
             <!-- Dropdown select for smaller screens -->
             <select onchange="window.location.href=this.value;">
@@ -32,12 +33,13 @@
                 <option value="#Skills">Skills</option>
                 <option value="#Projects">Projects</option>
                 <option value="#Connect">Connect</option>
+                <option value="#Leave_msg">Leave Message</option>
             </select>
         </nav>
     </header>
     <main>
         <div class="container">
-            <img class="profile-photo" src="./images/photo.jpg" height="300px" alt="profile-picture">
+            <img class="profile-photo" src="./images/photo.jpg" height="250px" alt="profile-picture">
             <h1>Gayane G</h1>
         </div>
         <!-- Section for displaying About info -->
@@ -65,7 +67,7 @@
             </div>
         </section>
         <!-- Section for displaying Experience info -->
-        <section class="experience">
+        <section id="Experience">
             <h2>Experience</h2>
             <div class="experience-grid">
                 <div class="experience-block">
@@ -117,7 +119,7 @@
                 </div>
                 <div class="connect-block">
                     <li>
-                        <a href="galla.galuss@gmail.com" class="'email">
+                        <a href="mailto:galla.galuss@gmail.com" class="'email">
                             <img src="./images/gmail-logo.png" height="25px">
                         </a>
                     </li>
@@ -125,7 +127,7 @@
             </div>
         </section>
         <!-- A section for leaving a message -->
-        <section id="leave_msg">
+        <section id="Leave_msg">
             <h2>Leave a Message</h2>
             <form name="leave_message">
                 <label for="usersName">Your Name:</label><br>
@@ -137,7 +139,7 @@
                 <label for="usersMessage">Your Message:</label><br>
                 <textarea class="input-field" name="usersMessage" required"></textarea><br>
 
-                <button type="submit">Submit</button>
+                <button type="submit" class="submit-button">Submit</button>
             </form>
         </section>
 
